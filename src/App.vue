@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item icon="search">搜索</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">朋友</van-tabbar-item>
+      <van-tabbar-item icon="setting-o">设置</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      active: 0
+    };
+  }
+};
+</script>
 
 <style>
 #app {
