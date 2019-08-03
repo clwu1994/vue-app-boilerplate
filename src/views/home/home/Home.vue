@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    <van-swipe :loop="false" class="fs0">
-      <van-swipe-item v-for="(image, index) in images" :key="index">
-        <img v-lazy="image" width="100%"/>
-      </van-swipe-item>
+    <van-swipe :height="150" :loop="false" class="fs0">
+      <van-swipe-item v-for="(num, index) in nums" :key="index">{{num}}</van-swipe-item>
     </van-swipe>
   </div>
 </template>
@@ -13,10 +11,24 @@ export default {
   name: "home",
   data() {
     return {
-      images: [
-        'https://xituan.oss-cn-shenzhen.aliyuncs.com/crm/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b8551562904005318.jpg'
-      ]
+      nums: [1, 2, 3 , 4]
     }
   }
 };
 </script>
+
+<style lang="less" scoped>
+.van-swipe-item {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  &:nth-child(even) {
+    background-color: #39a9ed;
+  }
+  &:nth-child(odd) {
+    background-color: #66c6f2;
+  }
+}
+</style>
