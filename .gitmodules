@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 [submodule "mock"]
 	path = mock
 	url = https://github.com/clwu1994/mock.git
-=======
 [submodule "src/utils"]
 	path = src/utils
 	url = https://github.com/clwu1994/utils.git
->>>>>>> 4d0a12affe91088d9bca3f0068a53a09d5b165a8
