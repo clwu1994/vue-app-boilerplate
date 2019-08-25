@@ -41,8 +41,9 @@ export default {
   },
   methods: {
     async init() {
+      if (!this.url) return;
       try {
-        let img = await loadImage(this.url);
+        let img = await loadImage(this.url, true);
         this.style = {
           backgroundImage: `url(${img.src})`
         };
