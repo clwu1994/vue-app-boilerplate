@@ -5,6 +5,7 @@ import store from "@/service/store";
 import "./plugins/vant.config";
 import "./assets/styles/index.less";
 Vue.config.productionTip = false;
+// eslint-disable-next-line no-undef
 GLOBAL.vbus = new Vue();
 new Vue({
   router,
